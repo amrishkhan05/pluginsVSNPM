@@ -1,0 +1,32 @@
+{
+	"name": "theme-microsoft-graph",
+	"displayName": "Microsoft Graph Theme",
+	"description": "A Microsoft Graph theme for VS Code.",
+	"version": "0.0.2",
+	"publisher": "martellaj",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Microsoft Graph",
+				"uiTheme": "vs-dark",
+				"path": "./themes/base.tmTheme"
+			}
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/martellaj/microsoft-graph-theme"
+	},
+	"icon": "icon.svg",
+	"__metadata": {
+		"id": "32adde32-3639-4058-9383-9055d29b7126",
+		"publisherId": "e6d554da-00d3-4943-b2e1-e3b2657a1e01",
+		"publisherDisplayName": "Joe Martella"
+	}
+}

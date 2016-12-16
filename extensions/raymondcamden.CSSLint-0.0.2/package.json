@@ -1,0 +1,47 @@
+{
+	"name": "CSSLint",
+	"description": "CSSLint extension",
+	"author": "Raymond Camden",
+	"license": "MIT",
+	"version": "0.0.2",
+	"publisher": "raymondcamden",
+	"engines": {
+		"vscode": "0.10.x"
+	},
+	"categories": [
+		"Linters"
+	],
+	"activationEvents": [
+		"onLanguage:css"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Example configuration",
+			"properties": {
+				"languageServerExample.maxNumberOfProblems": {
+					"type": "number",
+					"default": 100,
+					"description": "Controls the maximum number of problems produced by the server."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+	},
+	"devDependencies": {
+		"typescript": "^1.6.2",
+		"vscode": "0.10.x"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^1.1.0"
+	},
+	"__metadata": {
+		"id": "592341ba-1a9f-4f90-9880-90614f5d574e",
+		"publisherId": "7483a41b-963b-44b4-98f8-5cace52cdb21",
+		"publisherDisplayName": "Raymond Camden"
+	}
+}

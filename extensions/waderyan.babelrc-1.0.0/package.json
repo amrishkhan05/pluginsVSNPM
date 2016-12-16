@@ -1,0 +1,45 @@
+{
+	"name": "babelrc",
+	"displayName": "Babelrc",
+	"description": "JSON validation for babelrc",
+	"version": "1.0.0",
+	"publisher": "waderyan",
+	"engines": {
+		"vscode": "^0.10.8"
+	},
+	"icon": "babel.svg",
+	"galleryBanner": {
+		"color": "#0000FF",
+		"theme": "dark"
+	},
+	"categories": [
+		"Other"
+	],
+	"contributes": {
+		"jsonValidation": [
+			{
+				"fileMatch": ".babelrc",
+				"url": "http://json.schemastore.org/babelrc"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"vscode": "^0.11.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/waderyan/vscode-babelrc"
+	},
+	"bugs": {
+		"type": "git",
+		"email": "waander@microsoft.com"
+	},
+	"__metadata": {
+		"id": "9383ac61-0ba7-4ebb-8efb-0e939c1005ea",
+		"publisherId": "531ba7ca-0230-4a97-bfd1-0d02fdb02958",
+		"publisherDisplayName": "Wade Anderson"
+	}
+}

@@ -1,0 +1,164 @@
+{
+	"name": "mono-debug",
+	"displayName": "Mono Debug",
+	"version": "0.11.0",
+	"publisher": "ms-vscode",
+	"description": "Visual Studio Code debugger extension for Mono",
+	"icon": "images/mono-debug-icon.svg",
+	"categories": [
+		"Debuggers"
+	],
+	"author": {
+		"name": "Microsoft Corporation"
+	},
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"prepublish": "make build",
+		"vscode:prepublish": "make build",
+		"compile": "make build",
+		"watch": "node ./node_modules/typescript/bin/tsc -w -p ./tests",
+		"test": "node ./node_modules/mocha/bin/mocha --timeout 999999 -u tdd ./tests/out/"
+	},
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"dependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Microsoft/vscode-mono-debug.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Microsoft/vscode-mono-debug/issues"
+	},
+	"devDependencies": {
+		"@types/es6-collections": "^0.5.29",
+		"@types/es6-promise": "0.0.32",
+		"@types/mocha": "^2.2.32",
+		"@types/node": "^6.0.39",
+		"mocha": "^2.4.5",
+		"typescript": "^2.0.3",
+		"vscode-debugprotocol": "^1.13.0",
+		"vscode-debugadapter-testsupport": "^1.13.0",
+		"vsce": "^1.14.0"
+	},
+	"contributes": {
+		"breakpoints": [
+			{
+				"language": "csharp"
+			},
+			{
+				"language": "fsharp"
+			}
+		],
+		"debuggers": [
+			{
+				"type": "mono",
+				"label": "C# Mono",
+				"program": "./bin/Release/mono-debug.exe",
+				"osx": {
+					"runtime": "mono"
+				},
+				"linux": {
+					"runtime": "mono"
+				},
+				"aiKey": "AIF-d9b70cd4-b9f9-4d70-929b-a071c400b217",
+				"initialConfigurations": [
+					{
+						"name": "%mono.launch.config.name%",
+						"type": "mono",
+						"request": "launch",
+						"program": "${workspaceRoot}/program.exe",
+						"args": [],
+						"cwd": "${workspaceRoot}",
+						"preLaunchTask": "",
+						"runtimeExecutable": null,
+						"env": {},
+						"externalConsole": false
+					},
+					{
+						"name": "%mono.attach.config.name%",
+						"type": "mono",
+						"request": "attach",
+						"address": "localhost",
+						"port": 55555
+					}
+				],
+				"configurationAttributes": {
+					"launch": {
+						"required": [
+							"program"
+						],
+						"properties": {
+							"program": {
+								"type": "string",
+								"description": "%mono.launch.program.description%"
+							},
+							"args": {
+								"type": "array",
+								"description": "%mono.launch.args.description%",
+								"items": {
+									"type": "string"
+								},
+								"default": []
+							},
+							"cwd": {
+								"type": "string",
+								"description": "%mono.launch.cwd.description%",
+								"default": "."
+							},
+							"runtimeExecutable": {
+								"type": [
+									"string",
+									"null"
+								],
+								"description": "%mono.launch.runtimeExecutable.description%",
+								"default": null
+							},
+							"runtimeArgs": {
+								"type": "array",
+								"description": "%mono.launch.runtimeArgs.description%",
+								"items": {
+									"type": "string"
+								},
+								"default": []
+							},
+							"env": {
+								"type": "object",
+								"description": "%mono.launch.env.description%",
+								"default": {}
+							},
+							"externalConsole": {
+								"type": "boolean",
+								"description": "%mono.launch.externalConsole.description%",
+								"default": true
+							}
+						}
+					},
+					"attach": {
+						"required": [
+							"port"
+						],
+						"properties": {
+							"port": {
+								"type": "number",
+								"description": "%mono.attach.port.description%",
+								"default": 55555
+							},
+							"address": {
+								"type": "string",
+								"description": "%mono.attach.address.description%",
+								"default": "undefined"
+							}
+						}
+					}
+				}
+			}
+		]
+	},
+	"__metadata": {
+		"id": "28dd5df5-9ecf-486c-b2e6-517483951691",
+		"publisherId": "5f5636e7-69ed-4afe-b5d6-8d231fb3d3ee",
+		"publisherDisplayName": "Microsoft"
+	}
+}

@@ -1,0 +1,36 @@
+{
+	"name": "NodeAssertionSnippets",
+	"description": "Code snippets for Node.js assertions",
+	"version": "0.1.0",
+	"displayName": "Node.js Assertion Snippets",
+	"publisher": "jaymorrow",
+	"icon": "images/nodejs.png",
+	"license": "SEE LICENSE IN LICENSE.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jaymorrow/vscode-assertions"
+	},
+	"engines": {
+		"vscode": "0.10.x"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/snippets.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "8ff452fb-5658-43df-b4c7-fd9e9f9054b3",
+		"publisherId": "57dae312-986a-4054-8448-e7630e02da5a",
+		"publisherDisplayName": "Jay Morrow"
+	}
+}

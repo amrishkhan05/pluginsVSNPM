@@ -1,0 +1,26 @@
+{
+	"name": "backbone-js-snippets",
+	"displayName": "Backbone JS snippets",
+	"description": "A collection of Backbone and Underscore JS snippets. Type 'bb' to get a list of availlable snippets.",
+	"version": "0.0.1",
+	"publisher": "ioanaapetrei",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "59bb9860-2b96-4dd6-a657-f0e16ca8db4f",
+		"publisherId": "6b5618c9-fe39-4d51-96b0-ad549297b1d8",
+		"publisherDisplayName": "Ioana Apetrei"
+	}
+}
